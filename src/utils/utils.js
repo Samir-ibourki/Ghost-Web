@@ -33,4 +33,26 @@ export const products = [
       "A dark, mysterious blend that fuels your inner power. Zero sugar, maximum energy — Ghost Swamp Water is not for the faint-hearted.",
     image: "/src/assets/green.png",
   },
+  {
+    id: 4,
+    name: "Peach Perfection",
+    tagline: "Just Peachy.",
+    description: "Unbelievably sweet peach flavor with that signature Ghost kick. Zero sugar, all peach.",
+    image: "/src/assets/peach.png",
+  },
+  {
+    id: 5,
+    name: "Blue Blast",
+    tagline: "Electric Blue.",
+    description: "A shocking burst of blue raspberry energy. Intense, bold, and zero sugar.",
+    image: "/src/assets/bleu.png",
+  },
+  {
+    id: 6,
+    name: "Lemonade Flash",
+    tagline: "Zesty Zen.",
+    description: "A lightning bolt of citrus lemonade. Sharp, refreshing, and zero sugar.",
+    image: "/src/assets/yellow.png",
+  },
+  
 ];

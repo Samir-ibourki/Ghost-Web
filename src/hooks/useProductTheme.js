@@ -15,5 +15,9 @@ export const useProductTheme = (activeProduct) => {
     root.style.setProperty("--color-text", theme.text);
     root.style.setProperty("--color-card-bg", theme.cardBg);
     root.style.setProperty("--color-glow", theme.glow);
+    
+    // Header contrast bridge
+    root.style.setProperty("--header-invert", theme.isDark ? "1" : "0");
+    root.style.setProperty("--header-text-color", theme.isDark ? "#ffffff" : "var(--color-text)");
   }, [activeProduct]);
 };

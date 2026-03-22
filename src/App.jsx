@@ -3,25 +3,28 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import { useProductTheme } from "./hooks/useProductTheme";
 import { products } from "./utils/utils";
+import { Products } from "./components/Products";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeProduct = products[activeIndex];
 
+  const heroProductsCount = 3;
   useProductTheme(activeProduct.themeKey);
   const handleSwitch = () => {
-    setActiveIndex((prev) => (prev + 1) % products.length);
+    setActiveIndex((prev) => (prev + 1) % heroProductsCount);
   };
 
   return (
-    <section className="h-screen w-full flex flex-col overflow-hidden transition-colors duration-800">
+    <section className="w-full flex flex-col transition-colors duration-800 min-h-screen">
       <Header />
       <Home
         product={activeProduct}
         onSwitch={handleSwitch}
         activeIndex={activeIndex}
-        totalProducts={products.length}
+        totalProducts={heroProductsCount}
       />
+      <Products />
     </section>
   );
 }

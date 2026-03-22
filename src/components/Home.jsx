@@ -110,7 +110,7 @@ const Home = ({ product, onSwitch, activeIndex, totalProducts }) => {
   return (
     <section
       ref={heroRef}
-      className="hero-section relative flex-1 w-full flex items-center justify-center overflow-hidden"
+      className="hero-section relative w-full flex items-center justify-center overflow-hidden h-[calc(100vh-55px)] md:h-[calc(100vh-72px)]"
     >
       {/* decorative background  */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -121,6 +121,7 @@ const Home = ({ product, onSwitch, activeIndex, totalProducts }) => {
             opacity: 0.15,
           }}
         />
+          
         <div
           className="absolute bottom-0 left-0 w-full h-[30%] primary-bg"
           style={{
@@ -140,10 +141,11 @@ const Home = ({ product, onSwitch, activeIndex, totalProducts }) => {
 
       {/* content */}
       <div 
-        className="relative z-10 w-full max-w-[90vw] mx-auto flex flex-col lg:flex-row items-center justify-between gap-4  md:pt-1 pb-16 lg:pt-0"
+        className="relative z-10 w-full max-w-[90vw] mx-auto flex flex-col lg:flex-row items-center justify-between lg:gap-8  md:pt-1 pb-16 lg:pt-0"
       >
+        
         {/* left: text content */}
-        <div ref={textRef} className="flex-1 max-w-xl text-center lg:text-left">
+        <div ref={textRef} className="flex-1 max-w-xl text-center   lg:text-left">
           <h1
             className="hero-title font-black leading-[1.1] mb-2 md:mb-4 text-[clamp(1.5rem,7vw,4.5rem)]"
             style={{ fontFamily: "'Outfit', sans-serif" }}
@@ -207,7 +209,8 @@ const Home = ({ product, onSwitch, activeIndex, totalProducts }) => {
             ref={canRef}
             src={product.image}
             alt={product.name}
-            className="relative z-10 h-[40vh] md:h-[75vh] lg:h-[85vh] object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-105"
+            data-flip-id="hero-can"
+            className="hero-can relative z-10 h-[44vh] md:h-[75vh] lg:h-[100vh] object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-105"
             style={{
               filter: "drop-shadow(0 30px 60px var(--color-glow))",
               transition: "filter 0.8s ease",

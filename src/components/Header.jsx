@@ -11,7 +11,7 @@ import {
 } from "@ant-design/icons";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
   const imgLogo = useRef();
@@ -67,6 +67,15 @@ const Header = () => {
             duration: 0.4,
             ease: "power2.out",
           });
+          gsap.to(".nav-link, .social-icon, .hamburger-btn", {
+            color: "#ffffff",
+            opacity: 1,
+            duration: 0.4
+          });
+          gsap.to(imgLogo.current, {
+            filter: "brightness(0) invert(1)",
+            duration: 0.4
+          });
         },
         onLeaveBack: () => {
           gsap.to(headerEl.current, {
@@ -74,6 +83,15 @@ const Header = () => {
             backdropFilter: "blur(0px)",
             duration: 0.4,
             ease: "power2.out",
+          });
+          gsap.to(".nav-link, .social-icon, .hamburger-btn", {
+            color: "var(--color-text)",
+            opacity: 0.5,
+            duration: 0.4
+          });
+          gsap.to(imgLogo.current, {
+            filter: "brightness(1) invert(0)",
+            duration: 0.4
           });
         },
       });
@@ -83,6 +101,20 @@ const Header = () => {
 
   return (
     <section ref={container} className="sticky top-0 w-full z-50">
+      <style>
+        {`
+          .nav-link, .social-icon {
+            color: var(--header-text-color);
+          }
+          .nav-link:hover {
+            color: var(--color-accent) !important;
+          }
+          .social-icon:hover {
+            color: var(--color-accent) !important;
+            opacity: 1 !important;
+          }
+        `}
+      </style>
       <header
         ref={headerEl}
         className="w-full py-1 transition-all duration-400 ease-out"
@@ -91,7 +123,13 @@ const Header = () => {
         <div className="flex justify-between items-center w-[90vw] mx-auto">
           {/* logo */}
           <div className="flex-1 flex">
-            <img alt="Ghost Energy" ref={imgLogo} className="w-20 md:w-28" src={logo} />
+            <img 
+              alt="Ghost Energy" 
+              ref={imgLogo} 
+              className="w-20 md:w-28" 
+              src={logo} 
+              style={{ filter: "brightness(0) invert(var(--header-invert))" }}
+            />
           </div>
 
           {/* nav links */}
@@ -100,15 +138,8 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="nav-link relative text-sm text-[var(--color-text)]
-                           transition-colors duration-500 group"
-                style={{ "--hover-color": "var(--color-accent)" }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.color = "var(--color-accent)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.color = "var(--color-text)")
-                }
+                className="nav-link relative text-sm transition-colors duration-500 group"
+                style={{ color: "inherit" }}
               >
                 {item.label}
                 <span
@@ -128,16 +159,8 @@ const Header = () => {
                 (Icon, i) => (
                   <Icon
                     key={i}
-                    className="social-icon text-base transition-colors duration-500 cursor-pointer"
-                    style={{ color: "var(--color-text)", opacity: 0.5 }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.color = "var(--color-accent)";
-                      e.currentTarget.style.opacity = 1;
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.color = "var(--color-text)";
-                      e.currentTarget.style.opacity = 0.5;
-                    }}
+                    className="social-icon text-base transition-colors duration-500 cursor-pointer opacity-50 hover:opacity-100"
+                    style={{ color: "inherit" }}
                   />
                 ),
               )}
@@ -145,8 +168,8 @@ const Header = () => {
 
             {/* hamburger btn */}
             <button
-              className="md:hidden transition-colors duration-200 relative z-50 p-2"
-              style={{ color: "var(--color-text)", opacity: 0.9 }}
+              className="hamburger-btn md:hidden transition-colors duration-200 relative z-50 p-2"
+              style={{ color: "var(--header-text-color)", opacity: 0.9 }}
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
             >
