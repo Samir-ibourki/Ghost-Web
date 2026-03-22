@@ -109,6 +109,7 @@ const Home = ({ product, onSwitch, activeIndex, totalProducts }) => {
 
   return (
     <section
+      id="home"
       ref={heroRef}
       className="hero-section relative w-full flex items-center justify-center overflow-hidden h-[calc(100vh-55px)] md:h-[calc(100vh-72px)]"
     >

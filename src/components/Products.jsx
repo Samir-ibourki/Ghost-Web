@@ -30,7 +30,7 @@ useGSAP(()=>{
 
 
   return (
-    <section className="py-16 md:py-24 px-6 md:px-12 bg-transparent">
+    <section id="products" className="py-16 md:py-24 px-6 md:px-12 bg-transparent">
       <div className="max-w-[95vw] mx-auto">
         <h2 
           className="title text-3xl md:text-5xl font-black uppercase mb-10 tracking-tight text-center "
