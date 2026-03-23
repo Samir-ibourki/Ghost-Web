@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import { useProductTheme } from "./hooks/useProductTheme";
 import { products } from "./utils/utils";
 import { Products } from "./components/Products";
-import { About } from "./components/About";
+import { LifeStyle } from "./components/LifeStyle";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -26,7 +26,7 @@ function App() {
         totalProducts={heroProductsCount}
       />
       <Products />
-      <About/>
+      <LifeStyle/>
     </section>
   );
 }
