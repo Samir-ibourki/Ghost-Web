@@ -21,14 +21,14 @@ const Header = () => {
 
   useGSAP(
     () => {
-      // logo 
+      // logo
       gsap.fromTo(
         imgLogo.current,
         { y: -20, opacity: 0 },
         { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
       );
 
-      // nav links 
+      // nav links
       gsap.fromTo(
         ".nav-link",
         { y: -20, opacity: 0 },
@@ -42,7 +42,7 @@ const Header = () => {
         },
       );
 
-      // social icons 
+      // social icons
       gsap.fromTo(
         ".social-icon",
         { y: -20, opacity: 0 },
@@ -70,11 +70,11 @@ const Header = () => {
           gsap.to(".nav-link, .social-icon, .hamburger-btn", {
             color: "#ffffff",
             opacity: 1,
-            duration: 0.4
+            duration: 0.4,
           });
           gsap.to(imgLogo.current, {
             filter: "brightness(0) invert(1)",
-            duration: 0.4
+            duration: 0.4,
           });
         },
         onLeaveBack: () => {
@@ -87,11 +87,11 @@ const Header = () => {
           gsap.to(".nav-link, .social-icon, .hamburger-btn", {
             color: "var(--color-text)",
             opacity: 0.5,
-            duration: 0.4
+            duration: 0.4,
           });
           gsap.to(imgLogo.current, {
             filter: "brightness(1) invert(0)",
-            duration: 0.4
+            duration: 0.4,
           });
         },
       });
@@ -123,11 +123,11 @@ const Header = () => {
         <div className="flex justify-between items-center w-[90vw] mx-auto">
           {/* logo */}
           <div className="flex-1 flex">
-            <img 
-              alt="Ghost Energy" 
-              ref={imgLogo} 
-              className="w-20 md:w-28" 
-              src={logo} 
+            <img
+              alt="Ghost Energy"
+              ref={imgLogo}
+              className="w-20 md:w-28"
+              src={logo}
               style={{ filter: "brightness(0) invert(var(--header-invert))" }}
             />
           </div>
@@ -143,9 +143,7 @@ const Header = () => {
               >
                 {item.label}
                 <span
-                  className="absolute -bottom-1 left-0 w-0 h-px
-                                 transition-all duration-300
-                                 group-hover:w-full"
+                  className="absolute -bottom-1 left-0 w-0 h-px transition-all duration-300 group-hover:w-full"
                   style={{ backgroundColor: "var(--color-accent)" }}
                 />
               </a>
@@ -186,7 +184,9 @@ const Header = () => {
       {/* mobile menu */}
       <div
         className={`md:hidden absolute top-full left-0 w-full overflow-hidden transition-all duration-500 ease-in-out bg-black/95 backdrop-blur-xl ${
-          mobileOpen ? "max-h-[500px] opacity-100 border-b" : "max-h-0 opacity-0"
+          mobileOpen
+            ? "max-h-[500px] opacity-100 border-b"
+            : "max-h-0 opacity-0"
         }`}
         style={{
           borderBottomColor: mobileOpen ? "var(--color-accent)" : "transparent",

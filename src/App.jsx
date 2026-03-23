@@ -5,6 +5,7 @@ import { useProductTheme } from "./hooks/useProductTheme";
 import { products } from "./utils/utils";
 import { Products } from "./components/Products";
 import { LifeStyle } from "./components/LifeStyle";
+import SocialProof from "./components/SocialProof";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -27,6 +28,7 @@ function App() {
       />
       <Products />
       <LifeStyle/>
+      <SocialProof/>
     </section>
   );
 }
