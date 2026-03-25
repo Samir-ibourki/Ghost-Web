@@ -7,6 +7,7 @@ export const productThemes = {
     accent: "#8bbf3f",
     text: "#e8f4e0",
     glow: "rgba(139, 191, 63, 0.25)",
+    isDark: true,
   },
   macAndCheese: {
     bg: "#fdf3e0",
