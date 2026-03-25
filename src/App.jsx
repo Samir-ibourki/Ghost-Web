@@ -6,6 +6,7 @@ import { products } from "./utils/utils";
 import { Products } from "./components/Products";
 import { LifeStyle } from "./components/LifeStyle";
 import SocialProof from "./components/SocialProof";
+import Contact from "./components/Contact";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -27,8 +28,9 @@ function App() {
         totalProducts={heroProductsCount}
       />
       <Products />
-      <LifeStyle/>
-      <SocialProof/>
+      <LifeStyle />
+      <SocialProof />
+      <Contact />
     </section>
   );
 }

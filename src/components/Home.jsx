@@ -122,7 +122,7 @@ const Home = ({ product, onSwitch, activeIndex, totalProducts }) => {
             opacity: 0.15,
           }}
         />
-          
+
         <div
           className="absolute bottom-0 left-0 w-full h-[30%] primary-bg"
           style={{
@@ -141,12 +141,12 @@ const Home = ({ product, onSwitch, activeIndex, totalProducts }) => {
       </div>
 
       {/* content */}
-      <div 
-        className="relative z-10 w-full max-w-[90vw] mx-auto flex flex-col lg:flex-row items-center justify-between lg:gap-8  md:pt-1 pb-16 lg:pt-0"
-      >
-        
+      <div className="relative z-10 w-full max-w-[90vw] mx-auto flex flex-col lg:flex-row items-center justify-between lg:gap-8  md:pt-1 pb-16 lg:pt-0">
         {/* left: text content */}
-        <div ref={textRef} className="flex-1 max-w-xl text-center   lg:text-left">
+        <div
+          ref={textRef}
+          className="flex-1 max-w-xl text-center   lg:text-left"
+        >
           <h1
             className="hero-title font-black leading-[1.1] mb-2 md:mb-4 text-[clamp(1.5rem,7vw,4.5rem)]"
             style={{ fontFamily: "'Outfit', sans-serif" }}
@@ -155,8 +155,7 @@ const Home = ({ product, onSwitch, activeIndex, totalProducts }) => {
             <br />
             Your Energy Should Too.
             <br />
-            Choose{" "}
-            <span className="accent-text">Ghost Energy.</span>
+            Choose <span className="accent-text">Ghost Energy.</span>
           </h1>
 
           <p

@@ -38,28 +38,27 @@ export const products = [
     id: 4,
     name: "Peach Perfection",
     tagline: "Just Peachy.",
-    description: "Unbelievably sweet peach flavor with that signature Ghost kick. Zero sugar, all peach.",
+    description:
+      "Unbelievably sweet peach flavor with that signature Ghost kick. Zero sugar, all peach.",
     image: "/src/assets/peach.png",
   },
   {
     id: 5,
-    name: "Blue Blast",
-    tagline: "Electric Blue.",
-    description: "A shocking burst of blue raspberry energy. Intense, bold, and zero sugar.",
-    image: "/src/assets/bleu.png",
+    name: "Welch Grap",
+    tagline: "Grap Cran.",
+    description:
+      "A shocking burst of blue raspberry energy. Intense, bold, and zero sugar.",
+    image: "/src/assets/welch.png",
   },
   {
     id: 6,
     name: "Lemonade Flash",
     tagline: "Zesty Zen.",
-    description: "A lightning bolt of citrus lemonade. Sharp, refreshing, and zero sugar.",
+    description:
+      "A lightning bolt of citrus lemonade. Sharp, refreshing, and zero sugar.",
     image: "/src/assets/yellow.png",
   },
-  
 ];
-
-
-
 
 export const tweets = [
   {
@@ -180,9 +179,61 @@ export const tiktoks = [
 
 export const stars = [5, 5, 5, 4, 5];
 export const reviews = [
-  { name: "Jake M.",    text: "Best energy drink I've ever had. The mac & cheese flavor sounds wild but it's actually amazing.", stars: 5, flavor: "Mac & Cheese" },
-  { name: "Priya S.",   text: "No crash whatsoever. I drink it before every workout and feel dialed in for hours.", stars: 5, flavor: "Swamp Water"  },
-  { name: "Luca T.",    text: "Sour milk got me hooked. Zero sugar and it actually tastes good? Unreal.", stars: 5, flavor: "Sour Milk"    },
-  { name: "Dana K.",    text: "Ghost is the only energy drink I trust. Clean ingredients, insane flavor.", stars: 4, flavor: "Mac & Cheese" },
-  { name: "Omar J.",    text: "Swamp water is my go-to. Tastes nothing like the name and that's the best part.", stars: 5, flavor: "Swamp Water"  },
+  {
+    name: "Jake M.",
+    text: "Best energy drink I've ever had. The mac & cheese flavor sounds wild but it's actually amazing.",
+    stars: 5,
+    flavor: "Mac & Cheese",
+  },
+  {
+    name: "Priya S.",
+    text: "No crash whatsoever. I drink it before every workout and feel dialed in for hours.",
+    stars: 5,
+    flavor: "Swamp Water",
+  },
+  {
+    name: "Luca T.",
+    text: "Sour milk got me hooked. Zero sugar and it actually tastes good? Unreal.",
+    stars: 5,
+    flavor: "Sour Milk",
+  },
+  {
+    name: "Dana K.",
+    text: "Ghost is the only energy drink I trust. Clean ingredients, insane flavor.",
+    stars: 4,
+    flavor: "Mac & Cheese",
+  },
+  {
+    name: "Omar J.",
+    text: "Swamp water is my go-to. Tastes nothing like the name and that's the best part.",
+    stars: 5,
+    flavor: "Swamp Water",
+  },
+];
+
+export const cards = [
+  {
+    num: "01",
+    title: "PARTNERSHIPS",
+    email: "partnerships@ghost.co",
+    desc: "Athletes, creators & sponsorships",
+  },
+  {
+    num: "02",
+    title: "PRESS & MEDIA",
+    email: "press@ghost.co",
+    desc: "Interviews, press kits & assets",
+  },
+  {
+    num: "03",
+    title: "WHOLESALE",
+    email: "wholesale@ghost.co",
+    desc: "Retail & distribution orders",
+  },
+  {
+    num: "04",
+    title: "GENERAL",
+    email: "hello@ghost.co",
+    desc: "Anything else on your mind",
+  },
 ];
