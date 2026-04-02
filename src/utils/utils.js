@@ -1,3 +1,10 @@
+import orange from "../assets/orange.png";
+import white from "../assets/white.png";
+import green from "../assets/green.png";
+import peach from "../assets/peach.png";
+import welch from "../assets/welch.png";
+import yellow from "../assets/yellow.png";
+
 export const navLinks = [
   { label: "Home", href: "#" },
   { label: "Products", href: "#products" },
@@ -14,7 +21,7 @@ export const products = [
     tagline: "Fuel Your Fire.",
     description:
       "Bold. Cheesy. Unstoppable. Ghost Mac & Cheese brings the heat with zero sugar and insane flavor — energy that hits different.",
-    image: "/src/assets/orange.png",
+    image: orange,
   },
   {
     id: 2,
@@ -23,7 +30,7 @@ export const products = [
     tagline: "Stay Fresh. Stay Sharp.",
     description:
       "Crisp, clean, and refreshingly smooth. Ghost Sour Milk delivers pure energy with zero sugar — the freshest way to power up.",
-    image: "/src/assets/white.png",
+    image: white,
   },
   {
     id: 3,
@@ -32,7 +39,7 @@ export const products = [
     tagline: "Unleash the Beast.",
     description:
       "A dark, mysterious blend that fuels your inner power. Zero sugar, maximum energy — Ghost Swamp Water is not for the faint-hearted.",
-    image: "/src/assets/green.png",
+    image: green,
   },
   {
     id: 4,
@@ -40,7 +47,7 @@ export const products = [
     tagline: "Just Peachy.",
     description:
       "Unbelievably sweet peach flavor with that signature Ghost kick. Zero sugar, all peach.",
-    image: "/src/assets/peach.png",
+    image: peach,
   },
   {
     id: 5,
@@ -48,7 +55,7 @@ export const products = [
     tagline: "Grap Cran.",
     description:
       "A shocking burst of blue raspberry energy. Intense, bold, and zero sugar.",
-    image: "/src/assets/welch.png",
+    image: welch,
   },
   {
     id: 6,
@@ -56,7 +63,7 @@ export const products = [
     tagline: "Zesty Zen.",
     description:
       "A lightning bolt of citrus lemonade. Sharp, refreshing, and zero sugar.",
-    image: "/src/assets/yellow.png",
+    image: yellow,
   },
 ];
 
